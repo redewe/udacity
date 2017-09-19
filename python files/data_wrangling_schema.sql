@@ -1,5 +1,5 @@
 CREATE TABLE nodes (
-    id INTEGER PRIMARY KEY NOT NULL,
+    id INTEGER NOT NULL,
     lat REAL,
     lon REAL,
     user TEXT,
@@ -18,7 +18,7 @@ CREATE TABLE nodes_tags (
 );
 
 CREATE TABLE ways (
-    id INTEGER PRIMARY KEY NOT NULL,
+    id INTEGER NOT NULL,
     user TEXT,
     uid INTEGER,
     version TEXT,
