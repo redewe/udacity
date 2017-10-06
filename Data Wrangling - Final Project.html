@@ -11786,9 +11786,9 @@ Chosen mainly due to its friendly size. One of the smallest countries I could th
 <p><strong>Files used to clean and convert data formats:</strong><br/>
 Most of the code used were taken from Udacity's Data Wrangling class - Case Study Lesson. Others taken from searches via Google which led to many samples from <a href="https://stackoverflow.com">https://stackoverflow.com</a></p>
 <ul>
-<li><a href="https://github.com/redewe/udacity/blob/master/python%20files/Produce%20sample%20osm%20file.ipynb">Produce sample.osm file</a> </li>
-<li><a href="https://github.com/redewe/udacity/blob/master/python%20files/Data_Audit.ipynb">Data Auditing and Cleaning</a></li>
-<li><a href="https://github.com/redewe/udacity/blob/master/python%20files/XML%20file%20to%20CSV%20files.ipynb">Convert XML file to CSV files for loading into SQLite3</a></li>
+<li><a href="https://github.com/redewe/udacity/blob/master/python%20files/Produce+sample+osm+file.py">Produce sample.osm file</a> </li>
+<li><a href="https://github.com/redewe/udacity/blob/master/python%20files/Data_Audit.py">Data Auditing and Cleaning</a></li>
+<li><a href="https://github.com/redewe/udacity/blob/master/python%20files/XML+file+to+CSV+files.py">Convert XML file to CSV files for loading into SQLite3</a></li>
 </ul>
 
 </div>
@@ -11907,7 +11907,7 @@ ways_tags.csv                  21.44 MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Enquire database</span>
@@ -11964,12 +11964,12 @@ ways_tags.csv                  21.44 MB
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Problems-Encountered-with-Data">Problems Encountered with Data<a class="anchor-link" href="#Problems-Encountered-with-Data">&#182;</a></h2><h3 id="Issue-#1:-Cultural-issues">Issue #1: Cultural issues<a class="anchor-link" href="#Issue-#1:-Cultural-issues">&#182;</a></h3><ul>
-<li>Language Inconsistency - some were in English, others in Chinese. Street names were a mixture of Malay and English e.g. <em>Jalan</em> is Malay for road. I've included a list of other Malay names into the expected list of words during the audit process in the Python File <a href="https://github.com/redewe/udacity/blob/master/python%20files/Data_Audit.ipynb">Data Auditing and Cleaning</a></li>
+<li>Language Inconsistency - some were in English, others in Chinese. Street names were a mixture of Malay and English e.g. <em>Jalan</em> is Malay for road. I've included a list of other Malay names into the expected list of words during the audit process in the Python File <a href="https://github.com/redewe/udacity/blob/master/python%20files/XML+file+to+CSV+files.py">Data Auditing and Cleaning</a></li>
 </ul>
 <h3 id="Issue-#2.a:-User-entry-issues---keys">Issue #2.a: User entry issues - keys<a class="anchor-link" href="#Issue-#2.a:-User-entry-issues---keys">&#182;</a></h3><ul>
 <li>Alternative keys for the same value were discovered e.g. name_1, name_2, building_1 Full list as below taken from the Python file mentioned above</li>
 <li>Some of the keys were also tagged as "FIXME" which meant that the data was incomplete</li>
-<li>While there was a tag for address, the keys like <em>Jalan</em> which is Malay for road was also used as a tag on its own. Proof of this can be found in <a href="https://github.com/redewe/udacity/blob/master/python%20files/Data_Audit.ipynb">Data Auditing and Cleaning</a></li>
+<li>While there was a tag for address, the keys like <em>Jalan</em> which is Malay for road was also used as a tag on its own. Proof of this can be found in <a href="https://github.com/redewe/udacity/blob/master/python%20files/XML+file+to+CSV+files.py">Data Auditing and Cleaning</a></li>
 </ul>
 <h3 id="Issue-#2.b:-User-entry-issues---unnecessary-&quot;yes&quot;-value-for-buildings">Issue #2.b: User entry issues - unnecessary "yes" value for buildings<a class="anchor-link" href="#Issue-#2.b:-User-entry-issues---unnecessary-&quot;yes&quot;-value-for-buildings">&#182;</a></h3><ul>
 <li>While not really a major issue, 77% of the values in the data for buildings are just "yes" rather than the type of building it is. Cleaning this would perhaps reduce the file size by removing 92,677 lines of code. </li>
@@ -11980,7 +11980,7 @@ ways_tags.csv                  21.44 MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Find percentage of keys with latitude/longitude in nodes_tags </span>
@@ -12052,7 +12052,7 @@ ways_tags.csv                  21.44 MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Find percentage of keys with cities are in nodes_tags </span>
@@ -12111,7 +12111,7 @@ ways_tags.csv                  21.44 MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#clean_cities = pd.concat([cities[col][0].lower() for col in cities.columns], axis=1)</span>
@@ -12177,7 +12177,7 @@ ways_tags.csv                  21.44 MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Find all lat,long points in data</span>
@@ -12194,7 +12194,7 @@ ways_tags.csv                  21.44 MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Code taken from https://www.kaggle.com/somesnm/new-york-parties-eda </span>
@@ -21439,10 +21439,10 @@ MDMzMzMzM7OmOKlgZmZmZmZmZk1xUsHMzMzMzMzMmvJ/EgAiGMHpp3gAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#db.close()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
 </div>
